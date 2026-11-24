@@ -1,23 +1,21 @@
 # Mission Spieltag · FC Lachendorf
 
-Mobile Spieltest-Version 0.2, Querformat empfohlen. Eigenständiges statisches Browserspiel mit Canvas und eigenen PNG-Dateien, ohne Paketinstallation oder Build-Schritt. GitHub Pages: Settings → Pages → Deploy from a branch → main → /(root).
+Mobiles 2D-Browserspiel im Querformat. Live-Test: https://fclachendorf.github.io/mission-spieltag/
 
-## Bedienung
+## Spielen
 
-Smartphone: Bewegungsstick links und Aktion rechts. Desktop: WASD/Pfeiltasten und E. Sammle sechs Gegenstände ein und verbessere den Container am Ausbau-Schild. Betrete den Container durch die Tür; links liegt der Materialraum, rechts der Treffpunkt. Ausrüstung und Ausbauten werden lokal gespeichert, alle 2,5 Sekunden auch die Position. Browser und Geräte teilen den Spielstand nicht. Keine Anmeldung, kein Backend.
+Smartphone: Im linken Drittel berühren und ziehen. Der Joystick erscheint am Finger. Für Aktionen nahe herangehen und Gegenstand, Tür oder Schild gedrückt halten, bis der Ring voll ist. Beim Loslassen oder Weglaufen wird abgebrochen. Desktop: WASD/Pfeiltasten, E; alternativ Objekt mit der Maus halten.
 
-## Grafiken
+Sechs Gegenstände sammeln → Container am Ausbau-Schild herrichten (40 Taler) → Lichter (20 Taler) → Pfand an der Garage einlagern (+40 Taler) → Rasenheizung am Hauptplatz kaufen (40 Taler). Beide Containertüren sind benutzbar. Noch eine frühe Testversion, kein fertiges Spiel.
 
-PNG in assets/tiles, assets/props und assets/characters ersetzen. Boden: 32×32; Kiste: 64×32; vorhandener Spieler: 64×96, im Spiel 32×48 dargestellt. Hütchen: cone_red.png und cone_yellow.png. Aktuell verwendet die Figur bewusst ein einzelnes Standbild. Richtungsanimationen, zusätzliche Bodenvarianten und Charakteranpassung sind noch nicht implementiert. Keine Bilddateien werden von externen Diensten geladen.
+## Ohne Browserleiste
 
-## Entwicklung
+Vollbild-Knopf im Spiel, soweit unterstützt. Auf iPhone in Safari über Teilen → Zum Home-Bildschirm hinzufügen und über das neue Symbol starten. Auf Android über das Browsermenü installieren/zum Startbildschirm hinzufügen. Abhängig von Gerät und Browser kann die Ansicht vom Vollbild abweichen. Die App bleibt online; es gibt keinen Offlinecache. Speicherstände können zwischen normalem Browser und Home-Bildschirm-App getrennt sein.
 
-index.html: Oberfläche. style.css: Vollbild und mobile Steuerung. game.js: Welt, Bewegung, Kollision, Interaktionen und Spielstand. Lokal über einen statischen HTTP-Server ausliefern, z.B. `python -m http.server 8080`. Für ALL-INKL können diese Dateien einschließlich assets unverändert hochgeladen werden.
+## Dateien und Entwicklung
 
-## Status
+Statisches HTML/CSS/JavaScript, keine externen Laufzeitabhängigkeiten. `index.html`, `style.css`, `game.js`, `manifest.webmanifest`, `assets/`. Lokal über einen statischen Server starten, z.B. `python -m http.server 8080`. Tests: `node check-mobile.cjs`. GitHub Pages: main, /(root). Für ALL-INKL können die gleichen Laufzeitdateien hochgeladen werden.
 
-Fertig für Tests: Bewegung, Kamera, Touchstick, einfache Kollisionen, Container mit zwei Räumen, sechs Gegenstände, Vereinstaler, zwei Ausbauten, lokaler Spielstand und Zurücksetzen.
+Grafiken: Boden 32×32, Kiste 64×32, Spieler 64×96, im Spiel 32×48. Spielerdateien: player_front_s/w.png, player_back_s/w.png, player_left_s/w.png, player_right_s/w.png; _s steht, _w geht. Je Richtung wechseln die zwei Bilder. Zusätzliche Bodenvarianten und Figurenanpassung folgen erst nach der Hauptspielschleife.
 
-Offen: Phaser-Umstieg bewerten, Innenraumgrafiken, Laufanimationen, Platzpflege, Finale, Audio, Abschlusskarte, optionales Konto. Der geheime Adventshinweis ist noch nicht enthalten. Die ursprünglichen Planungsdokumente und internen Rätseldetails gehören nicht in dieses öffentliche Repository.
-
-Auf dem echten Handy prüfen: Hoch-/Querformat, Bildschirmränder und Browserleisten, Stick und Aktion gleichzeitig, Container betreten/verlassen, Kollisionen, Reload und Fortsetzen, Menü und Zurücksetzen. Testversion ist noch kein fertiges Spiel.
+Speicherung: lokal, automatischer Spielstand, Menü zum Zurücksetzen. Keine Registrierung und keine Cloud-Synchronisierung. Siehe STATUS.md für den aktuellen Entwicklungsstand.
