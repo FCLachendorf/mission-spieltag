@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#16251f"><title>Mission Spieltag · FC Lachendorf</title><link rel="stylesheet" href="style.css"></head><body>
+<canvas id="world" aria-label="Vereinsgelände des FC Lachendorf"></canvas>
+<header><div><strong>MISSION SPIELTAG</strong><small>FC LACHENDORF · TEST 0.2</small></div><div id="stats">Lädt …</div><button id="menu" aria-label="Spielmenü öffnen">Menü</button></header>
+<aside id="quest"><small>PACK MIT AN</small><strong id="task">Ausrüstung einsammeln</strong><span id="detail">Gehe zu den markierten Gegenständen.</span></aside>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="stick" role="group" aria-label="Bewegung"><div id="knob"></div><span>BEWEGEN</span></div>
+<button id="interact" disabled><b>E</b><span>Geh näher heran</span></button>
+<div id="desktop">WASD / Pfeiltasten · E zum Interagieren</div>
+<div id="rotate"><div><span>↻</span><h1>Mehr Platz für deinen Verein</h1><p>Dreh dein Handy ins Querformat.</p><button id="portrait">Trotzdem weiterspielen</button></div></div>
+<dialog id="settings"><h2>Kurze Pause</h2><p>Bewege dich mit dem Stick oder WASD. Die Aktionstaste funktioniert, wenn du nahe genug an einem Gegenstand oder einer Tür stehst.</p><p id="storage">Dein Fortschritt wird lokal in diesem Browser gespeichert.</p><button id="resume">Weiterspielen</button><button id="reset">Spielstand zurücksetzen</button><small>Testversion: Platzpflege und Finale folgen.</small></dialog>
+<div id="loading"><h1>Ein Spieltag beginnt im Kleinen.</h1><p id="load-status">Deine Vereinsanlage wird vorbereitet …</p><button id="retry" hidden>Erneut laden</button></div>
+<script src="game.js" defer></script></body></html>
