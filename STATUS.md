@@ -1,4 +1,13 @@
-# Testversion 0.3 – 24. November 2026
+# Testversion 0.4 – 24. November 2026
+
+## Korrekturen in 0.4
+
+- Kameraziel: Fußpunkt bei 60 % der Bildschirmhöhe, damit der sichtbare Körper leicht unter der Mitte liegt. An Kartenrändern wird die Kamera weiterhin begrenzt.
+- Spieler um 5 % vergrößert. Pro Gehbild ein gemessener Fußpunkt (10–14 Pixel transparenter Rand), gemeinsam mit passendem kleinerem Bodenschatten.
+- Gegenstände werden unabhängig von ihrer PNG-Zeichenfläche skaliert: Fußball 10×10, Trikot 16×16, Kiste 56×28 Weltpixel. Interaktionsflächen bleiben für Touch großzügig.
+- Nunito lokal in assets/fonts, inklusive OFL-Lizenz. Oberfläche und Canvas-Beschriftung verwenden dieselbe Schrift. Deutsche Glyphen in der tatsächlichen Fontdatei geprüft.
+- JavaScript verwendet Unicode-Escapes, HTML Zeichenreferenzen. Frische Versionsparameter für JS und CSS verhindern das Wiederverwenden früher beschädigter Beschriftungen.
+- Noch kein zusätzliches Minispiel. Nächste Priorität ist eine aktive Sortieraufgabe im Materialraum; ASSETS-NEXT.md enthält den kleinen Grafikbedarf.
 
 ## Funktioniert
 

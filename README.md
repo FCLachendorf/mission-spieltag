@@ -1,6 +1,6 @@
 # Mission Spieltag · FC Lachendorf
 
-Mobiles 2D-Browserspiel im Querformat. Live-Test: https://fclachendorf.github.io/mission-spieltag/
+Mobiles 2D-Browserspiel im Querformat, Testversion 0.4. Live-Test: https://fclachendorf.github.io/mission-spieltag/
 
 ## Spielen
 
@@ -18,4 +18,4 @@ Statisches HTML/CSS/JavaScript, keine externen Laufzeitabhängigkeiten. `index.h
 
 Grafiken: Boden 32×32, Kiste 64×32, Spieler 64×96, im Spiel 32×48. Spielerdateien: player_front_s/w.png, player_back_s/w.png, player_left_s/w.png, player_right_s/w.png; _s steht, _w geht. Je Richtung wechseln die zwei Bilder. Zusätzliche Bodenvarianten und Figurenanpassung folgen erst nach der Hauptspielschleife.
 
-Speicherung: lokal, automatischer Spielstand, Menü zum Zurücksetzen. Keine Registrierung und keine Cloud-Synchronisierung. Siehe STATUS.md für den aktuellen Entwicklungsstand.
+Speicherung: lokal, automatischer Spielstand, Menü zum Zurücksetzen. Keine Registrierung und keine Cloud-Synchronisierung. Siehe STATUS.md für den aktuellen Entwicklungsstand und ASSETS-NEXT.md für den nächsten Grafikbedarf. Gemeinsame Schrift: Nunito, lokal in assets/fonts samt Lizenz. Die Darstellungsgrößen werden im Code festgelegt und sind unabhängig von der Pixelgröße der PNG-Dateien.
