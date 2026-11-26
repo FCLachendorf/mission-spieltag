@@ -9,12 +9,14 @@ assert(t.spriteLayout('ball',0,0).w<t.spriteLayout('box',0,0).w/3);assert(t.spri
 t.state.x=480;t.state.y=400;t.camera();assert(Math.abs(t.project(480,400).y/t.view.h-.60)<.005);
 assert(!/[^\x00-\x7F]/.test(fs.readFileSync('game.js','utf8')));assert(!/[^\x00-\x7F]/.test(fs.readFileSync('index.html','utf8')));
 assert(b.nodes.detail.textContent.includes('gedr\u00fcckt'));assert(t.state.explored.base.length>0&&t.state.explored.base.length<165);assert.equal(t.state.explored.training.length,0);
+const sa=t.actions().find(a=>a.type==='shovel');t.state.x=sa.x;t.state.y=sa.y;assert(t.perform(sa));assert(t.state.shovel);assert(!t.perform(sa));t.state.x=480;t.state.y=400;
+const back=t.spriteLayout('back_shovel_s',100,200);assert.equal(back.w,68*.525);assert.equal(back.x+32*.525,100);assert.equal(back.y+86*.525,200);
 // A touch must create a joystick only inside the left third; pointer ownership must be preserved.
 t.worldDown({pointerId:1,pointerType:'touch',clientX:120,clientY:280});assert.equal(t.stick.id,1);t.stickMove({pointerId:1,clientX:154,clientY:280});assert.equal(t.stick.x,1);t.worldDown({pointerId:2,pointerType:'touch',clientX:200,clientY:260});assert.equal(t.stick.id,1);t.release();t.worldDown({pointerId:3,pointerType:'touch',clientX:600,clientY:280});assert.equal(t.stick.id,null);
 // Release before the hold duration awards nothing, leaving range also cancels.
 let o=t.objects[0];t.state.x=o.x;t.state.y=o.y;let a=t.actions().find(a=>a.id==='item0');t.startHold(a,9);t.updateHold(500);assert.equal(t.state.items.length,0);b.nodes.world.events.pointerup({pointerId:9});t.updateHold(1200);assert.equal(t.state.items.length,0);t.startHold(a,10);t.state.x+=100;t.updateHold(1200);assert.equal(t.hold.id,null);assert.equal(t.state.items.length,0);
 for(let i=0;i<6;i++){o=t.objects[i];t.state.zone=o.zone;t.state.x=o.x;t.state.y=o.y;const a=t.actions().find(a=>a.id==='item'+i);t.startHold(a,20+i);t.updateHold(100+a.duration);assert.equal(t.state.items.length,i+1);}assert.equal(t.coins(),60);assert.equal(t.perform(a),false);
-const act=id=>{if(id==='heat')t.state.zone='stadium';if(['garage','upgrade','left','right'].includes(id))t.state.zone='base';const a=t.actions().find(a=>a.id===id);t.state.x=a.x;t.state.y=a.y;return t.perform(a)};
+const act=id=>{if(id!=='exit')t.state.room=id==='garage'?'material':false;if(id==='heat')t.state.zone='stadium';if(['garage','upgrade','left','right'].includes(id))t.state.zone='base';const a=t.actions().find(a=>a.id===id);t.state.x=a.x;t.state.y=a.y;return t.perform(a)};
 assert.equal(act('heat'),false);assert.equal(act('garage'),false);act('upgrade');assert.equal(t.coins(),20);act('upgrade');assert.equal(t.coins(),0);act('garage');assert.equal(t.coins(),40);act('garage');assert.equal(t.coins(),40);act('heat');assert.equal(t.coins(),0);assert(t.state.heating);act('heat');assert.equal(t.coins(),0);
 // Active sorting: carry one item, reject the wrong shelf, persist partial work, award once.
 act('left');assert.equal(t.state.sorted.length,0);
