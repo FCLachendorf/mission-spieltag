@@ -1,4 +1,16 @@
-# Testversion 0.5 – 26. November 2026
+# Testversion 0.6 – 26. November 2026
+
+## Neu in 0.6
+
+- Drei getrennte Außenbereiche von je 960×704 Weltpixeln: Containerhof als Ausgangspunkt, Trainingsfeld rechts, Spieltag unten. Automatische Übergänge an den markierten Wegenden, alternativ über die Aktionstaste. Ankunftspunkte verhindern sofortiges Zurückspringen.
+- Minimap rechts oben mit Figur, Wegen, Gebäuden, Übergängen und Fundstücken. Nicht erkundete Kacheln werden verdeckt; Erkundung wird getrennt pro Außenbereich und Innenraum gespeichert.
+- Sechs bisherige Fundstücke liegen auf die drei Bereiche verteilt. Bereichsbezogene Aufgabenhinweise unterstützen die Orientierung. Drei optionale Müllbeutel bringen je einmalig 5 Taler.
+- Drei Schneehaufenvarianten integriert. Schneefall mischt kleine Pixel und einfache Kreuzflocken; echte Partikelgrafiken bleiben optional. Noch keine aktive Schneeräumfunktion.
+- Sammelheft auf dem Tisch im Treffpunkt: 25 vorhandene Karten aus FCLachendorf/FCLachendorf-Sammelheft, zwei pro Ansicht auf 13 Seiten. Originalbilder werden erst beim Öffnen bzw. Blättern geladen. Das Spiel pausiert während der Ansicht. Kleine Wanddekoration mit dem vom Nutzer genannten Fundstück.
+- Alte Spielstände behalten Aufgaben, Tragegegenstand und Ausbauten. Alte Positionen passen nicht zur neuen Geometrie und starten deshalb im Containerhof. Neue Positionen und Erkundung bleiben erhalten.
+- Flächen für Verkaufsstand/Zuschauer sind vorgesehen; diese Ausbauten sind noch nicht spielbar. Echte Mannschaftsbilder stehen noch aus.
+
+Prüfung: Gates in beide Richtungen, ungültige Übergänge, Erkundungsmaske/Speicherstand, Migration, einmalige Müllbelohnung, Album-Paginierung und Bewegungspause. Browserprüfung bei 844×390 für beide Außenübergänge, Innenraum und Originalkarten.
 
 ## Neu in 0.5
 

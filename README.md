@@ -1,6 +1,12 @@
 # Mission Spieltag · FC Lachendorf
 
-Mobiles 2D-Browserspiel im Querformat, Testversion 0.5. Live-Test: https://fclachendorf.github.io/mission-spieltag/
+Mobiles 2D-Browserspiel im Querformat, Testversion 0.6. Live-Test: https://fclachendorf.github.io/mission-spieltag/
+
+## Bereiche und Orientierung
+
+Containerhof: Vereinsbasis, zwei Containerräume und Garage. Dem Weg nach rechts folgen, um ins Trainingsfeld zu wechseln; dem Weg nach unten folgen, um zum Spieltag zu gelangen. Training führt links zurück, Spieltag oben zurück. Die Wege müssen bis zum Kartenrand verfolgt werden. Die Minimap zeigt nur erkundetes Gelände. Kartenfortschritt und Bereich werden lokal gespeichert. Bei Übernahme älterer Spielstände bleibt der Fortschritt bestehen, der Standort beginnt im neuen Containerhof.
+
+Im Treffpunkt liegt ein interaktives Sammelheft mit 25 Originalkarten. Zwei Karten pro Ansicht, 13 Seiten. Die Bilder stammen aus dem öffentlichen Vereinsarchiv im Repository FCLachendorf/FCLachendorf-Sammelheft und werden bei Bedarf von dessen öffentlicher Bildquelle geladen. Das Spiel funktioniert ohne externe JavaScript-Bibliotheken; das Kartenheft benötigt zusätzlich eine Verbindung zu dieser Bildquelle.
 
 ## Spielen
 

@@ -1,4 +1,8 @@
-# Grafiken und Schriften ab Testversion 0.5
+# Grafiken und Schriften ab Testversion 0.6
+
+Neu: snow_pile_small.png, snow_pile_mid.png und snow_pile_big.png (je 64×64) sowie trash_bag.png (64×64). Sie werden unterschiedlich groß dargestellt und anhand des sichtbaren unteren Pixels am Boden verankert.
+
+Optionale Schneepartikel: assets/particles/snowflake_01.png, snowflake_02.png, snowflake_03.png. Jeweils 16×16 PNG mit transparentem Hintergrund, Flocke mittig, weiß bis leicht bläulich. Kein Schatten, kein Leuchten und keine eingebauten Bewegungsstreifen; Größe, Transparenz und Bewegung übernimmt das Spiel. Die Dateien werden noch nicht automatisch eingebunden, solange sie nicht vorhanden sind. Der aktuelle Effekt funktioniert ohne diese Grafiken.
 
 Bodenraster 32×32. Dateigröße und Größe in der Spielwelt sind unabhängig; transparente Ränder werden im Code berücksichtigt. Vorhandene Bilder müssen nicht auf ein einheitliches Exportformat gezwungen werden.
 
