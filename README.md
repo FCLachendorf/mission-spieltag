@@ -1,27 +1,31 @@
-# Mission Spieltag · FC Lachendorf
+## Test 0.8
+
+Restaurierung mit zwei einmaligen Minispielen: Nägel am Fenster ziehen und den Eingang mit der Schaufel freiräumen. Danach hilft Jörg im Spiel beim Herrichten (40 Materialtaler); Weihnachtsdeko kostet weitere 20 Taler. Größere Garage, 10 % näherer Blick und stärkerer Schneefall.
+
+# Mission Spieltag Â· FC Lachendorf
 
 Mobiles 2D-Browserspiel im Querformat, Testversion 0.6. Live-Test: https://fclachendorf.github.io/mission-spieltag/
 
 ## Bereiche und Orientierung
 
-Containerhof: Vereinsbasis, zwei Containerräume und Garage. Dem Weg nach rechts folgen, um ins Trainingsfeld zu wechseln; dem Weg nach unten folgen, um zum Spieltag zu gelangen. Training führt links zurück, Spieltag oben zurück. Die Wege müssen bis zum Kartenrand verfolgt werden. Die Minimap zeigt nur erkundetes Gelände. Kartenfortschritt und Bereich werden lokal gespeichert. Bei Übernahme älterer Spielstände bleibt der Fortschritt bestehen, der Standort beginnt im neuen Containerhof.
+Containerhof: Vereinsbasis, zwei ContainerrÃ¤ume und Garage. Dem Weg nach rechts folgen, um ins Trainingsfeld zu wechseln; dem Weg nach unten folgen, um zum Spieltag zu gelangen. Training fÃ¼hrt links zurÃ¼ck, Spieltag oben zurÃ¼ck. Die Wege mÃ¼ssen bis zum Kartenrand verfolgt werden. Die Minimap zeigt nur erkundetes GelÃ¤nde. Kartenfortschritt und Bereich werden lokal gespeichert. Bei Ãœbernahme Ã¤lterer SpielstÃ¤nde bleibt der Fortschritt bestehen, der Standort beginnt im neuen Containerhof.
 
-Im Treffpunkt liegt ein interaktives Sammelheft mit 25 Originalkarten. Zwei Karten pro Ansicht, 13 Seiten. Die Bilder stammen aus dem öffentlichen Vereinsarchiv im Repository FCLachendorf/FCLachendorf-Sammelheft und werden bei Bedarf von dessen öffentlicher Bildquelle geladen. Das Spiel funktioniert ohne externe JavaScript-Bibliotheken; das Kartenheft benötigt zusätzlich eine Verbindung zu dieser Bildquelle.
+Im Treffpunkt liegt ein interaktives Sammelheft mit 25 Originalkarten. Zwei Karten pro Ansicht, 13 Seiten. Die Bilder stammen aus dem Ã¶ffentlichen Vereinsarchiv im Repository FCLachendorf/FCLachendorf-Sammelheft und werden bei Bedarf von dessen Ã¶ffentlicher Bildquelle geladen. Das Spiel funktioniert ohne externe JavaScript-Bibliotheken; das Kartenheft benÃ¶tigt zusÃ¤tzlich eine Verbindung zu dieser Bildquelle.
 
 ## Spielen
 
-Smartphone: Im linken Drittel berühren und ziehen. Der Joystick erscheint am Finger. Für Aktionen nahe herangehen und Gegenstand, Tür oder Schild gedrückt halten, bis der Ring voll ist. Beim Loslassen oder Weglaufen wird abgebrochen. Desktop: WASD/Pfeiltasten, E; alternativ Objekt mit der Maus halten.
+Smartphone: Im linken Drittel berÃ¼hren und ziehen. Der Joystick erscheint am Finger. FÃ¼r Aktionen nahe herangehen und Gegenstand, TÃ¼r oder Schild gedrÃ¼ckt halten, bis der Ring voll ist. Beim Loslassen oder Weglaufen wird abgebrochen. Desktop: WASD/Pfeiltasten, E; alternativ Objekt mit der Maus halten.
 
-Sechs Gegenstände sammeln → Container am Ausbau-Schild herrichten (40 Taler) → Lichter (20 Taler) → Pfand an der Garage einlagern (+40 Taler) → Rasenheizung am Hauptplatz kaufen (40 Taler). Zusätzlich nach der Renovierung im linken Materialraum: sechs Materialien aufnehmen und zu den passenden Regalen tragen (+20 Taler einmalig). Beide Containertüren sind benutzbar. Noch eine frühe Testversion, kein fertiges Spiel.
+Sechs GegenstÃ¤nde sammeln â†’ Container am Ausbau-Schild herrichten (40 Taler) â†’ Lichter (20 Taler) â†’ Pfand an der Garage einlagern (+40 Taler) â†’ Rasenheizung am Hauptplatz kaufen (40 Taler). ZusÃ¤tzlich nach der Renovierung im linken Materialraum: sechs Materialien aufnehmen und zu den passenden Regalen tragen (+20 Taler einmalig). Beide ContainertÃ¼ren sind benutzbar. Noch eine frÃ¼he Testversion, kein fertiges Spiel.
 
 ## Ohne Browserleiste
 
-Vollbild-Knopf im Spiel, soweit unterstützt. Auf iPhone in Safari über Teilen → Zum Home-Bildschirm hinzufügen und über das neue Symbol starten. Auf Android über das Browsermenü installieren/zum Startbildschirm hinzufügen. Abhängig von Gerät und Browser kann die Ansicht vom Vollbild abweichen. Die App bleibt online; es gibt keinen Offlinecache. Speicherstände können zwischen normalem Browser und Home-Bildschirm-App getrennt sein.
+Vollbild-Knopf im Spiel, soweit unterstÃ¼tzt. Auf iPhone in Safari Ã¼ber Teilen â†’ Zum Home-Bildschirm hinzufÃ¼gen und Ã¼ber das neue Symbol starten. Auf Android Ã¼ber das BrowsermenÃ¼ installieren/zum Startbildschirm hinzufÃ¼gen. AbhÃ¤ngig von GerÃ¤t und Browser kann die Ansicht vom Vollbild abweichen. Die App bleibt online; es gibt keinen Offlinecache. SpeicherstÃ¤nde kÃ¶nnen zwischen normalem Browser und Home-Bildschirm-App getrennt sein.
 
 ## Dateien und Entwicklung
 
-Statisches HTML/CSS/JavaScript, keine externen Laufzeitabhängigkeiten. `index.html`, `style.css`, `game.js`, `manifest.webmanifest`, `assets/`. Lokal über einen statischen Server starten, z.B. `python -m http.server 8080`. Tests: `node check-mobile.cjs` und `node check-fonts.cjs`. GitHub Pages: main, /(root). Für ALL-INKL können die gleichen Laufzeitdateien hochgeladen werden.
+Statisches HTML/CSS/JavaScript, keine externen LaufzeitabhÃ¤ngigkeiten. `index.html`, `style.css`, `game.js`, `manifest.webmanifest`, `assets/`. Lokal Ã¼ber einen statischen Server starten, z.B. `python -m http.server 8080`. Tests: `node check-mobile.cjs` und `node check-fonts.cjs`. GitHub Pages: main, /(root). FÃ¼r ALL-INKL kÃ¶nnen die gleichen Laufzeitdateien hochgeladen werden.
 
-Grafiken: Boden 32×32, Kiste 64×32, Spieler 64×96, im Spiel 32×48. Spielerdateien: player_front_s/w.png, player_back_s/w.png, player_left_s/w.png, player_right_s/w.png; _s steht, _w geht. Je Richtung wechseln die zwei Bilder. Zusätzliche Bodenvarianten und Figurenanpassung folgen erst nach der Hauptspielschleife.
+Grafiken: Boden 32Ã—32, Kiste 64Ã—32, Spieler 64Ã—96, im Spiel 32Ã—48. Spielerdateien: player_front_s/w.png, player_back_s/w.png, player_left_s/w.png, player_right_s/w.png; _s steht, _w geht. Je Richtung wechseln die zwei Bilder. ZusÃ¤tzliche Bodenvarianten und Figurenanpassung folgen erst nach der Hauptspielschleife.
 
-Speicherung: lokal, automatischer Spielstand, Menü zum Zurücksetzen. Keine Registrierung und keine Cloud-Synchronisierung. Siehe STATUS.md für den aktuellen Entwicklungsstand und ASSETS.md für die Asset-Konventionen. Schriften: Minecraftia für Texte und RasterForge für Titel, lokal in assets/fonts. Nunito bleibt als Fallback. Die Darstellungsgrößen werden im Code festgelegt und sind unabhängig von der Pixelgröße der PNG-Dateien.
+Speicherung: lokal, automatischer Spielstand, MenÃ¼ zum ZurÃ¼cksetzen. Keine Registrierung und keine Cloud-Synchronisierung. Siehe STATUS.md fÃ¼r den aktuellen Entwicklungsstand und ASSETS.md fÃ¼r die Asset-Konventionen. Schriften: Minecraftia fÃ¼r Texte und RasterForge fÃ¼r Titel, lokal in assets/fonts. Nunito bleibt als Fallback. Die DarstellungsgrÃ¶ÃŸen werden im Code festgelegt und sind unabhÃ¤ngig von der PixelgrÃ¶ÃŸe der PNG-Dateien.
