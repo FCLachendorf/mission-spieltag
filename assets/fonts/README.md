@@ -1,4 +1,14 @@
-# Nunito
+# Schriften ab Version 0.5
+
+| Verwendung | Familie | Lokale Datei |
+|---|---|---|
+| Texte | Minecraftia | Minecraftia-Regular.woff2 |
+| Titel | RasterForge | RasterForgeRegular.woff2 |
+| Fallback | Nunito | Nunito-Variable.ttf |
+
+Minecraftia und RasterForge wurden vom Nutzer bereitgestellt. Beide enthalten die deutschen Glyphen. Es gibt keine externen Font-Aufrufe im Spiel.
+
+## Nunito
 
 Gemeinsame Schrift für Oberfläche und Texte in der Spielwelt. Lokal geladen, keine Verbindung zu Google Fonts im Spiel.
 

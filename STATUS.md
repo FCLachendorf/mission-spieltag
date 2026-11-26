@@ -1,4 +1,14 @@
-# Testversion 0.4 – 24. November 2026
+# Testversion 0.5 – 26. November 2026
+
+## Neu in 0.5
+
+- Minecraftia für Fließtexte, RasterForge für Überschriften; beide WOFF2-Dateien lokal. Nunito bleibt als Fallback erhalten. Beide neuen Dateien enthalten äöüÄÖÜß, anhand ihrer cmap-Tabellen geprüft.
+- Das gelieferte Regal (48×64), zwei Pfandkisten und der Schneeschieber (je 64×64) sind integriert. Größentabellen berücksichtigen ihre tatsächlichen Dateimaße und transparenten Ränder.
+- Nach der Container-Renovierung kann im linken Materialraum sortiert werden: sechs Teile aufnehmen, zum passenden Regal tragen, durch Halten ablegen. Falsche Regale geben Feedback und behalten den Gegenstand in der Hand. Richtige Ablagen werden am Regal sichtbar. Einmaliger Abschlussbonus: 20 Taler.
+- Teilfortschritt und getragener Gegenstand werden gespeichert. Alte Spielstände beginnen die neue optionale Aufgabe bei null; bestehende Upgrades bleiben erhalten.
+- Schneeschieber zunächst als sichtbares Werkzeug; noch keine aktive Räumfunktion. Die Pfandvarianten sind optische Varianten desselben Gegenstandstyps.
+
+Prüfung: check-mobile.cjs prüft zusätzlich Tragen, falsche/richtige Ablage, Speicherstand und einmalige Belohnung. check-fonts.cjs prüft die deutschen Glyphen direkt aus beiden WOFF2-Dateien.
 
 ## Korrekturen in 0.4
 
