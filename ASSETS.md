@@ -1,3 +1,11 @@
+## Eingebaut in 0.10
+
+- `assets/props/cloth.png` (64×64): roter Lappen im Fenster-Minispiel.
+- `assets/characters/player_front_shovel_w.png`, `player_back_shovel_w.png`, `player_left_shovel_w.png`, `player_right_shovel_w.png` (je 64×96): zweite Gehphase. Back-Shovel-Standbild bleibt 68×96; der Körperanker bleibt x=32.
+- `assets/particles/snowflake_01.png` bis `snowflake_03.png` (16×16), `snowflake_04.png` und `snowflake_05.png` (8×8): alle fünf verwendet.
+
+Aktuell werden keine neuen Texturen benötigt. Kreidewagen, Aufstellfigur und Trainingsstangen waren für spätere Geräte-/Platzaufgaben vorgesehen, sind aber noch nicht an spielbare Aufgaben gebunden. Erst nach Festlegung dieser Aufgaben weiterzeichnen.
+
 ## Eingebaut in 0.9
 
 `assets/minigames/pullnail/`: `window_dirty.png`, `window_fixed.png`, `wood_plank_1.png`, `wood_plank_2.png` (je 59×39), `nail.png` (16×16), `hammer.png` (96×32). Die Fensterebenen bleiben deckungsgleich. Der Lappen wird vorläufig direkt gezeichnet; zusätzliche Brett-/Hammer-Dateien sind nicht nötig.
@@ -8,14 +16,9 @@ Die Varianten container_worn_fixed_window.png und container_restored_decoration.
 
 | Priorität | Datei unter assets/ | Zeichenfläche | Zweck |
 |---|---|---|---|
-| 2 | characters/player_front_shovel_w.png | 64×96 | Zweite Bewegungsphase mit Schaufel |
-| 2 | characters/player_back_shovel_w.png | 68×96 | Zweite Bewegungsphase; Körperposition wie im vorhandenen _s |
-| 2 | characters/player_left_shovel_w.png | 64×96 | Zweite Bewegungsphase mit Schaufel |
-| 2 | characters/player_right_shovel_w.png | 64×96 | Zweite Bewegungsphase mit Schaufel |
 | 3 | props/line_marker.png | 64×64 | Kreidewagen für den Geräteraum |
 | 3 | props/training_dummy.png | 32×64 | Aufstellfigur |
 | 3 | props/pole_bundle.png | 32×64 | Bündel Trainingsstangen |
-| 4 | particles/snowflake_01.png bis snowflake_03.png | je 16×16 | Unterschiedliche Flocken, transparent und zentriert |
 
 Alle Maße sind Zeichenflächen, nicht die sichtbare Größe im Spiel. Die Figur innerhalb neuer Frames weder verschieben noch skalieren. Zusätzlicher Platz für Werkzeuge ist erlaubt, wenn die Seite bekannt ist. Minispiel-Grafiken und weitere Geräte sind erst nach der Lieferung verdrahtet; die aktuellen Minispiele verwenden Platzhalter und vorhandene Schneehaufen.
 

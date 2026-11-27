@@ -1,3 +1,7 @@
+## Test 0.10
+
+Fenster als große Nahansicht ohne Dialograhmen, korrekte Nagel-/Hammer-Ebenen und echte Lappentextur. Pixeliges Wischen mit 89-%-Ziel. Schaufel-Laufanimationen und alle fünf Schneeflocken eingebaut; Schneehaufen blockieren auch von oben.
+
 ## Test 0.9
 
 Fenster-Minispiel mit Originaltexturen: zwei Bretter nacheinander entfernen (vier Nägel), danach 78 % des Fensters sauberwischen. Beide Türen werden getrennt freigeschaufelt. Schaufel am Geräteraum ablegbar. Schneehaufen besitzen Kollisionen; fertige alte Spielstände bleiben erhalten.

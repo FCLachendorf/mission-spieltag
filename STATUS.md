@@ -1,3 +1,12 @@
+## Test 0.10
+
+- Fensterreparatur als große Nahansicht ohne Dialogkasten; Spiel-HUD währenddessen ausgeblendet. Nägel an den dunklen Endstellen der Bretter, Hammer hinter den Nagelköpfen und an die Fenstergröße angepasst.
+- Echte Lappentextur aus props/cloth.png. Kantiges Putzen in Originalpixel-Blöcken, 89 % einzigartige Fläche als Abschluss. Keine runden Wischkanten.
+- Alle vier Schaufel-Laufbilder eingebaut. Gleichbleibender Körpermaßstab und Fußanker; nur das hintere Standbild hat eine 68-Pixel-Zeichenfläche.
+- Alle fünf gelieferten Schneeflockenvarianten werden draußen mit unterschiedlicher Größe und Bewegung gezeichnet. Transparente Ränder werden beim Zeichnen ausgespart; reduzierte Bewegung bleibt berücksichtigt.
+- Schneekollisionen erfassen die gesamte sichtbare Höhe der Haufen statt nur deren unteren Bereich. Nordseitige Annäherung und Karten-Erreichbarkeit geprüft.
+- Keine weiteren Texturen erforderlich, bevor diese Änderungen auf dem Handy erprobt sind. Kreidewagen, Aufstellfigur und Stangen bleiben für spätere, noch nicht umgesetzte Aufgaben vorgesehen.
+
 ## Test 0.9
 
 - Originale Fensterebenen: zwei Nägel pro Brett, vorderes Brett zuerst. Anschließend Fenster mit Finger oder Maus reinigen; 78 % einzigartige Fläche reichen. Wiederholtes Wischen derselben Stelle zählt nicht mehrfach.
