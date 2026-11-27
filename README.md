@@ -1,3 +1,7 @@
+## Test 0.16
+
+Uwe Bartsch als wiederkehrender Begleiter mit fünf Posen und Sprechblase. Schneller Textaufbau, Tippen zum vollständigen Anzeigen, danach Weiter. Wichtige Dialoge pausieren das Spiel; abgeschlossene Gespräche werden gespeichert. Uwe-Button wiederholt den aktuellen Auftrag. Begrüßung und Hinweise zu Material, Container und Heizung; Trainingsaufgaben bleiben der nächste Entwicklungsschritt.
+
 ## Test 0.15
 
 Lappen liegt beim Reinigen sichtbar rechts neben dem Fenster. Mit Finger oder Maus greifen und auf das Fenster ziehen; beim Loslassen kehrt er an seinen Platz zurück. Pixelige Wischmaske und 100-%-Anzeige mit Resttoleranz bleiben erhalten. Fünf neue Trainingstexturen synchronisiert (noch keine Trainingsaufgabe damit implementiert).

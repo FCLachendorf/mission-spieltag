@@ -60,3 +60,7 @@ Auch ein komplettes GUI-Paket lohnt sich erst nach den nächsten Aufgaben: Dann 
 ## Synchronisieren
 
 Die lokalen Quelldateien sind maßgeblich. In 0.14 wurden alle 61 Quelldateien gegen GitHub geprüft und 17 neue/geänderte Dateien übernommen. Schneehaufen liegen jetzt nur unter `assets/environment/` im Repository. Asset-URLs haben eine Versionskennung, damit geänderte Bilder neu geladen werden.
+
+## Uwe (0.16)
+
+- [x] `characters/uwe/uwe_neutral.png`, `uwe_explain.png`, `uwe_point.png`, `uwe_think.png`, `uwe_happy.png`: jeweils 156×192, transparent. Als Dialogfiguren eingebaut. Weitere Laufanimationen sind dafür nicht erforderlich.
