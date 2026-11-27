@@ -1,3 +1,7 @@
+## Test 0.11
+
+93 % Reinigung mit passender Lappenmaske, korrigierte Nagelpositionen und vollständig sichtbarer Hammer. Hintere Nägel bleiben sichtbar, Ziehen dauert länger und hat eine Hebelbewegung. Schneehaufen verdecken die Figur abhängig von ihrer Position und blockieren an der Basis.
+
 ## Test 0.10
 
 Fenster als große Nahansicht ohne Dialograhmen, korrekte Nagel-/Hammer-Ebenen und echte Lappentextur. Pixeliges Wischen mit 89-%-Ziel. Schaufel-Laufanimationen und alle fünf Schneeflocken eingebaut; Schneehaufen blockieren auch von oben.

@@ -1,3 +1,12 @@
+## Test 0.11
+
+- Reinigungsschwelle 93 %. Wischmaske aus den tatsächlich sichtbaren Pixeln von cloth.png; transparente Ränder reinigen nicht. Lappen größer, weiterhin eckige Wischspuren.
+- Nagelpositionen nach den Markierungen korrigiert. Hintere Nägel von Anfang an sichtbar, aber erst nach dem vorderen Brett greifbar. Richtige Zeichenebenen verdecken überlagerte Nägel natürlich.
+- Hammer rechts gespiegelt und aus der Fensterbeschneidung genommen. Nagel und Hammer heben sich zusammen, mit größerer Hebelbewegung.
+- Ungefähr 2,5 Umdrehungen pro Nagel. Zeitbegrenzte Fortschrittsrate erlaubt keinen sofortigen Abschluss durch schnelle Fingerkreise; bei maximalem Tempo sind mindestens etwa drei Sekunden aktive Bewegung erforderlich.
+- Schneehaufen: feste Bodenfläche mit Tiefensortierung statt Kollision an der gesamten sichtbaren Höhe. Die Figur wird hinter den Haufen verdeckt und davor wieder vollständig gezeichnet. Alle Türen und Fundstücke bleiben erreichbar.
+- Bestehende abgeschlossene Aufgaben bleiben gespeichert.
+
 ## Test 0.10
 
 - Fensterreparatur als große Nahansicht ohne Dialogkasten; Spiel-HUD währenddessen ausgeblendet. Nägel an den dunklen Endstellen der Bretter, Hammer hinter den Nagelköpfen und an die Fenstergröße angepasst.
