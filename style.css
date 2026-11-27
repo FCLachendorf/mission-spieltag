@@ -35,3 +35,8 @@ body.repairing-window header,body.repairing-window #quest,body.repairing-window 
 /* Tools can extend beyond the window; board falls remain temporary. */
 #nail-board{overflow:visible}#nail-board #plank-1{z-index:4}#nail-board #nail-0,#nail-board #nail-1{z-index:6}#nail-board #nail-2,#nail-board #nail-3{z-index:3}#nail-board button:disabled{opacity:1;pointer-events:none}#nail-board button{transform:translate(-50%,-50%) translateY(var(--nail-lift,0px))}#nail-board #repair-hammer{transform:translate(-14%,-50%) translateY(var(--lift,0px)) rotate(var(--pull,0deg)) scaleX(var(--mirror,1));transform-origin:14% 50%}#nail-board #repair-cloth{width:24%;max-width:156px;z-index:7}
 #repair.window-repair{overflow:clip}
+
+/* The cloth rests next to the window and is dragged onto it. */
+#nail-board #repair-cloth{pointer-events:auto;touch-action:none;cursor:grab;user-select:none;-webkit-user-drag:none}#nail-board #repair-cloth:active{cursor:grabbing}.window-repair:has(#wipe-canvas:not([hidden])) #nail-board{width:min(60vw,calc((100dvh - 128px)*1.51282),786px)}
+
+.window-repair:has(#wipe-canvas:not([hidden])) #repair-control{position:absolute;right:0;bottom:0}

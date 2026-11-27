@@ -16,10 +16,10 @@ Stand 0.14. Dateien unter `assets/` ablegen. PNG, transparenter Hintergrund, kei
 
 Mit vorhandenen Hütchen, Aufstellfigur und Kreidewagen lässt sich bereits viel programmieren. Diese Ergänzungen machen Start und fertigen Zustand klarer:
 
-- [ ] `props/pole_bundle.png` – 64×64: gebündelte Trainingsstangen zum Abholen im Geräteraum.
-- [ ] `props/training_pole.png` – 32×64: einzelne aufgestellte Stange, Fuß unten mittig.
-- [ ] `props/goal_small.png` – 128×96: kleines Trainingstor, transparentes Netz; kein Hintergrundrasen.
-- [ ] `props/ball_bag.png` – 64×64: Ballnetz bzw. Ballsack am Geräteraum.
+- [x] `props/pole_bundle.png` – 64×64: gebündelte Trainingsstangen zum Abholen im Geräteraum.
+- [x] `props/training_pole.png` – 32×64: einzelne aufgestellte Stange, Fuß unten mittig.
+- [x] `props/goal_small.png` – 128×96: kleines Trainingstor, transparentes Netz; kein Hintergrundrasen.
+- [x] `props/ball_bag_empty.png` und `props/ball_bag_filled.png` – 64×64: Ballnetz bzw. Ballsack am Geräteraum.
 
 Zielmarkierungen, Fortschrittsbalken und Kreidelinien werden zunächst im Code gezeichnet. Dafür brauchst du keine Einzelbilder. Spielfelder werden vor diesen Aufgaben längs ausgerichtet.
 

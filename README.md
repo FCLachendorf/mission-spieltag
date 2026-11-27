@@ -1,3 +1,7 @@
+## Test 0.15
+
+Lappen liegt beim Reinigen sichtbar rechts neben dem Fenster. Mit Finger oder Maus greifen und auf das Fenster ziehen; beim Loslassen kehrt er an seinen Platz zurück. Pixelige Wischmaske und 100-%-Anzeige mit Resttoleranz bleiben erhalten. Fünf neue Trainingstexturen synchronisiert (noch keine Trainingsaufgabe damit implementiert).
+
 ## Test 0.14
 
 Sechs feste Mischgruppen aus Bäumen, Büschen und Schnee statt verstreuter Einzelobjekte. Alle 61 lokalen Asset-Dateien abgeglichen, 17 neue/geänderte Dateien übernommen; Schneehaufen nach environment verschoben. Versionierte Bild-URLs verhindern veraltete Cache-Bilder. Priorisierte Zeichenliste in ASSETS.md und nächste Spielaufgaben in ROADMAP.md. Bestehende Aufgaben, Kollisions- und Erreichbarkeitstests bestehen.
