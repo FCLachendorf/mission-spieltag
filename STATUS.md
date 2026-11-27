@@ -1,3 +1,10 @@
+## Test 0.12
+
+- Sichtbares Reinigungsziel 100 %, intern weiterhin 93 % als Toleranz. Die Anzeige ist auf den toleranten Abschluss normiert; beim Abschluss werden verbleibende Schmutzpixel vollständig entfernt und 100 % bestätigt.
+- Kontinuierliches, stärkeres Fensterwackeln bei Kreisbewegungen statt wiederholt neugestarteter CSS-Animation. Die Bewegung wächst mit der Zugspannung und klingt kurz aus. Reduzierte Bewegung bleibt berücksichtigt.
+- Seitliche Gebäudekollisionen an den sichtbaren Wandkanten ausgerichtet: Garage ab Quellpixel 18 bis 174, Container ab 17 bis 272; kleiner Fußradius statt breiter zusätzlicher Randzone. Dachüberstände bestimmen die seitliche Wandkollision nicht.
+- Aufgaben, Wege, Überdeckung der Schneehaufen und Speichern bleiben erhalten.
+
 ## Test 0.11
 
 - Reinigungsschwelle 93 %. Wischmaske aus den tatsächlich sichtbaren Pixeln von cloth.png; transparente Ränder reinigen nicht. Lappen größer, weiterhin eckige Wischspuren.

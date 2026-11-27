@@ -1,3 +1,7 @@
+## Test 0.12
+
+Reinigungsanzeige bis 100 % mit unsichtbarer Resttoleranz. Stärkeres kontinuierliches Wackeln beim Nagelziehen. Engere seitliche Kollisionen an Garage und Container anhand der sichtbaren Wände.
+
 ## Test 0.11
 
 93 % Reinigung mit passender Lappenmaske, korrigierte Nagelpositionen und vollständig sichtbarer Hammer. Hintere Nägel bleiben sichtbar, Ziehen dauert länger und hat eine Hebelbewegung. Schneehaufen verdecken die Figur abhängig von ihrer Position und blockieren an der Basis.

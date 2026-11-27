@@ -1,3 +1,15 @@
+## Nächste Texturen nach 0.12
+
+Zuerst nur die zwei Bäume. Sie ersetzen die einfachen Platzhalter und rahmen die Bereiche ein. Der Busch folgt danach; neue Trainingsgeräte noch zurückstellen.
+
+| Priorität | Datei unter assets/ | Zeichenfläche | Motiv / Anker |
+|---|---|---|---|
+| 1 | environment/tree_snow_01.png | 96×128 | Verschneite Tanne; Stammfuß bei x=48, y=120 |
+| 1 | environment/tree_snow_02.png | 96×128 | Kahler winterlicher Laubbaum; Stammfuß ebenfalls x=48, y=120 |
+| 2 | environment/bush_snow_01.png | 64×64 | Kleiner verschneiter Busch; Bodenanker x=32, y=56 |
+
+Transparente PNGs, gleicher Pixelstil und Licht von links oben. Keinen rechteckigen Boden oder Schneeuntergrund mitzeichnen. Der sichtbare Baum soll innerhalb der Zeichenfläche liegen; die Anker sind wichtiger als eine exakt ausgenutzte Fläche. Noch nicht eingebaut, bis die Dateien geliefert wurden.
+
 ## Eingebaut in 0.10
 
 - `assets/props/cloth.png` (64×64): roter Lappen im Fenster-Minispiel.
