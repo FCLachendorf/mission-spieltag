@@ -1,3 +1,7 @@
+## Test 0.9
+
+Fenster-Minispiel mit Originaltexturen: zwei Bretter nacheinander entfernen (vier Nägel), danach 78 % des Fensters sauberwischen. Beide Türen werden getrennt freigeschaufelt. Schaufel am Geräteraum ablegbar. Schneehaufen besitzen Kollisionen; fertige alte Spielstände bleiben erhalten.
+
 ## Test 0.8
 
 Restaurierung mit zwei einmaligen Minispielen: Nägel am Fenster ziehen und den Eingang mit der Schaufel freiräumen. Danach hilft Jörg im Spiel beim Herrichten (40 Materialtaler); Weihnachtsdeko kostet weitere 20 Taler. Größere Garage, 10 % näherer Blick und stärkerer Schneefall.

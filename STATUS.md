@@ -1,3 +1,12 @@
+## Test 0.9
+
+- Originale Fensterebenen: zwei Nägel pro Brett, vorderes Brett zuerst. Anschließend Fenster mit Finger oder Maus reinigen; 78 % einzigartige Fläche reichen. Wiederholtes Wischen derselben Stelle zählt nicht mehrfach.
+- Gezogene Nägel, fertige Fenster und beide einzeln freigeschaufelten Eingänge werden gespeichert. Unfertige Wischflächen starten beim Wiederöffnen neu.
+- Schaufel am Geräteraum aufnehmen und ablegen.
+- Alle Schneehaufen blockieren an ihrer Bodenfläche. Fundstücke und Übergänge bleiben erreichbar; neue Hindernisse verschieben überlappende alte Spielerpositionen sicher an den Start.
+- Alte restaurierte Container bleiben fertig. Alte gemeinsame Schneeräum-Abschlüsse bleiben als beide freie Türen erhalten.
+- Freies Schippen anderer Schneehaufen bleibt offen.
+
 ## Test 0.8
 
 - Weltansicht um 10 % vergrößert; Figur und Umgebung wachsen gemeinsam.

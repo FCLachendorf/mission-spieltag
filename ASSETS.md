@@ -1,12 +1,13 @@
+## Eingebaut in 0.9
+
+`assets/minigames/pullnail/`: `window_dirty.png`, `window_fixed.png`, `wood_plank_1.png`, `wood_plank_2.png` (je 59×39), `nail.png` (16×16), `hammer.png` (96×32). Die Fensterebenen bleiben deckungsgleich. Der Lappen wird vorläufig direkt gezeichnet; zusätzliche Brett-/Hammer-Dateien sind nicht nötig.
+
 ## Nächste Texturen (0.8)
 
 Die Varianten container_worn_fixed_window.png und container_restored_decoration.png sind eingebaut. Weitere Gebäudezustände werden gerade nicht benötigt.
 
 | Priorität | Datei unter assets/ | Zeichenfläche | Zweck |
 |---|---|---|---|
-| 1 | minigames/wood_plank.png | 96×32 | Einzelnes verwittertes Brett, transparenter Hintergrund |
-| 1 | minigames/nail.png | 16×16 | Nagelkopf von vorne, transparent |
-| 1 | minigames/hammer.png | 32×32 | Klauenhammer zum Nagelziehen, transparent |
 | 2 | characters/player_front_shovel_w.png | 64×96 | Zweite Bewegungsphase mit Schaufel |
 | 2 | characters/player_back_shovel_w.png | 68×96 | Zweite Bewegungsphase; Körperposition wie im vorhandenen _s |
 | 2 | characters/player_left_shovel_w.png | 64×96 | Zweite Bewegungsphase mit Schaufel |
