@@ -1,3 +1,7 @@
+## Test 0.13
+
+Wintervegetation mit zwei Bäumen und drei Buschvarianten, passenden Bodenankern, Kollisionen und Verdeckung. Schneeflocken fallen mit individuellen Zufallspositionen und Bewegungen statt regelmäßiger Reihen.
+
 ## Test 0.12
 
 Reinigungsanzeige bis 100 % mit unsichtbarer Resttoleranz. Stärkeres kontinuierliches Wackeln beim Nagelziehen. Engere seitliche Kollisionen an Garage und Container anhand der sichtbaren Wände.

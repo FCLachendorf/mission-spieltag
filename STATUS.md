@@ -1,3 +1,11 @@
+## Test 0.13
+
+- Beide Winterbäume und alle drei Buschvarianten in allen drei Außenbereichen eingebaut. Größen und Seitenverhältnisse bleiben erhalten; getrennte Bodenanker berücksichtigen 64×64, 96×96 und 96×64 bei den Büschen.
+- Vegetation wird nach Bodentiefe mit der Figur und den Schneehaufen sortiert. Stamm- und Buschbasen blockieren, die oberen Pflanzenteile verdecken die Figur dahinter.
+- Platzhalterbäume ersetzt. Pflanzen erscheinen auf der Minimap nur innerhalb bereits erkundeter Bereiche.
+- Schneefall als dauerhafte Einzelpartikel mit zufälligen Startpositionen, Fallgeschwindigkeiten, seitlichen Driften, Schwingungen, Größen und Transparenzen. Sanft wechselnder Wind; kein geometrisches Reihenmuster und kein Zufallsflackern pro Bild.
+- Alle Fundstücke und Bereichsübergänge bleiben erreichbar. Fortschritt und erkundete Bereiche bleiben gespeichert.
+
 ## Test 0.12
 
 - Sichtbares Reinigungsziel 100 %, intern weiterhin 93 % als Toleranz. Die Anzeige ist auf den toleranten Abschluss normiert; beim Abschluss werden verbleibende Schmutzpixel vollständig entfernt und 100 % bestätigt.

@@ -1,3 +1,17 @@
+## Eingebaut in 0.13
+
+Alle fünf Dateien aus `assets/environment/` werden verwendet:
+
+| Datei | Quelle | Bodenanker in Quellpixeln | Einheitliche Skalierung |
+|---|---|---|---|
+| tree_snow_01.png | 96×128 | 48,125 | 1 |
+| tree_snow_02.png | 96×128 | 48,124 | 1 |
+| bush_snow_01.png | 64×64 | 32,58 | 0,75 |
+| bush_snow_02.png | 96×96 | 48,82 | 0,75 |
+| bush_snow_03.png | 96×64 | 48,59 | 0,75 |
+
+Die Anker richten sich nach dem tatsächlichen sichtbaren Bodenrand der gelieferten Bilder. Keine Verzerrung auf quadratische Zeichenflächen und kein Neuzeichnen nötig. Weitere Vegetationstexturen sind aktuell nicht erforderlich.
+
 ## Nächste Texturen nach 0.12
 
 Zuerst nur die zwei Bäume. Sie ersetzen die einfachen Platzhalter und rahmen die Bereiche ein. Der Busch folgt danach; neue Trainingsgeräte noch zurückstellen.
