@@ -1,81 +1,62 @@
-## Eingebaut in 0.13
+# Texturen-Checkliste – Mission Spieltag
 
-Alle fünf Dateien aus `assets/environment/` werden verwendet:
+Stand 0.14. Dateien unter `assets/` ablegen. PNG, transparenter Hintergrund, keine weichen Skalierungsfilter. Größen sind Zeichenflächen in Pixeln; bei größerem Motiv bitte zusätzliche transparente Ränder nennen. Gebäude und große Gegenstände aus derselben leicht erhöhten Perspektive wie der Container. Bodenanker jeweils unten mittig am sichtbaren Motiv.
 
-| Datei | Quelle | Bodenanker in Quellpixeln | Einheitliche Skalierung |
-|---|---|---|---|
-| tree_snow_01.png | 96×128 | 48,125 | 1 |
-| tree_snow_02.png | 96×128 | 48,124 | 1 |
-| bush_snow_01.png | 64×64 | 32,58 | 0,75 |
-| bush_snow_02.png | 96×96 | 48,82 | 0,75 |
-| bush_snow_03.png | 96×64 | 48,59 | 0,75 |
+## Schon vorhanden – bitte nicht erneut zeichnen
 
-Die Anker richten sich nach dem tatsächlichen sichtbaren Bodenrand der gelieferten Bilder. Keine Verzerrung auf quadratische Zeichenflächen und kein Neuzeichnen nötig. Weitere Vegetationstexturen sind aktuell nicht erforderlich.
+- [x] Zwei Winterbäume und drei Winterbüsche (unterschiedliche Zeichenflächen unterstützt).
+- [x] Drei Schneehaufen in `environment/` und fünf Schneeflocken in `particles/`.
+- [x] Container-Zustände, Garage, Fenster-Minispiel mit Hammer und Lappen.
+- [x] Spieler mit und ohne Schaufel, Gehbilder.
+- [x] Bälle, Hütchen, Trikot, Materialkiste, Schaufel und Regal.
+- [x] Leere und gefüllte grüne/gelbe Pfandkisten.
+- [x] `props/line_marker.png` (96×96) und `props/training_dummy.png` (64×128). Für kommende Platzaufgaben bereit; noch keine neue Aufgabe damit umgesetzt.
 
-## Nächste Texturen nach 0.12
+## Paket 1 – Trainingsfeld vorbereiten (als Nächstes)
 
-Zuerst nur die zwei Bäume. Sie ersetzen die einfachen Platzhalter und rahmen die Bereiche ein. Der Busch folgt danach; neue Trainingsgeräte noch zurückstellen.
+Mit vorhandenen Hütchen, Aufstellfigur und Kreidewagen lässt sich bereits viel programmieren. Diese Ergänzungen machen Start und fertigen Zustand klarer:
 
-| Priorität | Datei unter assets/ | Zeichenfläche | Motiv / Anker |
-|---|---|---|---|
-| 1 | environment/tree_snow_01.png | 96×128 | Verschneite Tanne; Stammfuß bei x=48, y=120 |
-| 1 | environment/tree_snow_02.png | 96×128 | Kahler winterlicher Laubbaum; Stammfuß ebenfalls x=48, y=120 |
-| 2 | environment/bush_snow_01.png | 64×64 | Kleiner verschneiter Busch; Bodenanker x=32, y=56 |
+- [ ] `props/pole_bundle.png` – 64×64: gebündelte Trainingsstangen zum Abholen im Geräteraum.
+- [ ] `props/training_pole.png` – 32×64: einzelne aufgestellte Stange, Fuß unten mittig.
+- [ ] `props/goal_small.png` – 128×96: kleines Trainingstor, transparentes Netz; kein Hintergrundrasen.
+- [ ] `props/ball_bag.png` – 64×64: Ballnetz bzw. Ballsack am Geräteraum.
 
-Transparente PNGs, gleicher Pixelstil und Licht von links oben. Keinen rechteckigen Boden oder Schneeuntergrund mitzeichnen. Der sichtbare Baum soll innerhalb der Zeichenfläche liegen; die Anker sind wichtiger als eine exakt ausgenutzte Fläche. Noch nicht eingebaut, bis die Dateien geliefert wurden.
+Zielmarkierungen, Fortschrittsbalken und Kreidelinien werden zunächst im Code gezeichnet. Dafür brauchst du keine Einzelbilder. Spielfelder werden vor diesen Aufgaben längs ausgerichtet.
 
-## Eingebaut in 0.10
+## Paket 2 – Verkaufsstand aufbauen
 
-- `assets/props/cloth.png` (64×64): roter Lappen im Fenster-Minispiel.
-- `assets/characters/player_front_shovel_w.png`, `player_back_shovel_w.png`, `player_left_shovel_w.png`, `player_right_shovel_w.png` (je 64×96): zweite Gehphase. Back-Shovel-Standbild bleibt 68×96; der Körperanker bleibt x=32.
-- `assets/particles/snowflake_01.png` bis `snowflake_03.png` (16×16), `snowflake_04.png` und `snowflake_05.png` (8×8): alle fünf verwendet.
+Erst nach Paket 1 nötig. Je Gebäudezustand gleiche Zeichenfläche und exakt gleicher Standort:
 
-Aktuell werden keine neuen Texturen benötigt. Kreidewagen, Aufstellfigur und Trainingsstangen waren für spätere Geräte-/Platzaufgaben vorgesehen, sind aber noch nicht an spielbare Aufgaben gebunden. Erst nach Festlegung dieser Aufgaben weiterzeichnen.
+- [ ] `buildings/kiosk_worn.png` – 192×160: geschlossener, unfertiger Verkaufsstand.
+- [ ] `buildings/kiosk_restored.png` – 192×160: fertiger Stand mit offener Ausgabe und Ablage.
+- [ ] `props/cup_empty.png` – 32×32: leerer Becher.
+- [ ] `props/cup_full.png` – 32×32: gleicher Becher gefüllt, identische Position.
+- [ ] `props/sausage_plate.png` – 32×32: Bratwurst auf Pappteller, ohne Markenaufschrift.
 
-## Eingebaut in 0.9
+Geplante Verwendung: Stand herrichten und eine kurze Bestellrunde spielen. Keine dauernd wiederholte Schneeschaufelpflicht.
 
-`assets/minigames/pullnail/`: `window_dirty.png`, `window_fixed.png`, `wood_plank_1.png`, `wood_plank_2.png` (je 59×39), `nail.png` (16×16), `hammer.png` (96×32). Die Fensterebenen bleiben deckungsgleich. Der Lappen wird vorläufig direkt gezeichnet; zusätzliche Brett-/Hammer-Dateien sind nicht nötig.
+## Paket 3 – Das fertige Lachtstadion
 
-## Nächste Texturen (0.8)
+- [ ] `buildings/stand_worn.png` – 256×160: kleines unfertiges Tribünenelement.
+- [ ] `buildings/stand_restored.png` – 256×160: gleiches Element mit fertigen Sitz-/Stehplätzen.
+- [ ] `environment/floodlight_off.png` – 64×192: Flutlichtmast, Licht aus.
+- [ ] `environment/floodlight_on.png` – 64×192: identischer Mast mit leuchtenden Lampen; Lichtschein macht der Code.
+- [ ] `props/goal_large.png` – 192×128: großes Tor für die Stirnseite des längs liegenden Platzes.
+- [ ] `props/bench.png` – 96×64: Vereinsbank, passend zu den vorhandenen Gebäuden.
 
-Die Varianten container_worn_fixed_window.png und container_restored_decoration.png sind eingebaut. Weitere Gebäudezustände werden gerade nicht benötigt.
+## Später optional – keine Voraussetzung
 
-| Priorität | Datei unter assets/ | Zeichenfläche | Zweck |
-|---|---|---|---|
-| 3 | props/line_marker.png | 64×64 | Kreidewagen für den Geräteraum |
-| 3 | props/training_dummy.png | 32×64 | Aufstellfigur |
-| 3 | props/pole_bundle.png | 32×64 | Bündel Trainingsstangen |
+- [ ] `environment/fence_horizontal.png` – 64×64: wiederholbares waagerechtes Zaunstück.
+- [ ] `environment/fence_vertical.png` – 32×64: entsprechendes senkrechtes Stück.
+- [ ] `props/team_photo_frame.png` – 64×48: Rahmen für Mannschaftsbilder im Container; Bildinhalt separat.
+- [ ] Eigenes Sammelheft: erst Seitenformat und Bedienung gemeinsam festlegen, danach Cover und Seiten zeichnen.
 
-Alle Maße sind Zeichenflächen, nicht die sichtbare Größe im Spiel. Die Figur innerhalb neuer Frames weder verschieben noch skalieren. Zusätzlicher Platz für Werkzeuge ist erlaubt, wenn die Seite bekannt ist. Minispiel-Grafiken und weitere Geräte sind erst nach der Lieferung verdrahtet; die aktuellen Minispiele verwenden Platzhalter und vorhandene Schneehaufen.
+## Partikel und GUI
 
-## 0.7: Original buildings and shovel poses
+Aktuell keine neuen Partikel erforderlich. Windrichtung, Böen und individuelle Bewegung entstehen im Code. Die fünf Schneeflocken reichen. Staub, Funken oder Schneespritzer erst ergänzen, wenn eine konkrete Aktion sie braucht.
 
-Buildings preserve aspect ratio: container 288x192, garage 192x96. Shovel poses use uniform pixel scale and a body pivot of x=32; the back pose has four additional pixels on the right. No shovel walk frames required yet. Free shovel pickup in the courtyard. Deposit action and crates moved into the container material room; garage is the equipment room. Snow clearing remains a following step.
+Auch ein komplettes GUI-Paket lohnt sich erst nach den nächsten Aufgaben: Dann stehen benötigte Fenster, Symbole und Größen fest. Die vorhandenen Fonts bleiben.
 
-# Grafiken und Schriften ab Testversion 0.6
+## Synchronisieren
 
-Neu: snow_pile_small.png, snow_pile_mid.png und snow_pile_big.png (je 64Ãƒâ€”64) sowie trash_bag.png (64Ãƒâ€”64). Sie werden unterschiedlich groÃƒÅ¸ dargestellt und anhand des sichtbaren unteren Pixels am Boden verankert.
-
-Optionale Schneepartikel: assets/particles/snowflake_01.png, snowflake_02.png, snowflake_03.png. Jeweils 16Ãƒâ€”16 PNG mit transparentem Hintergrund, Flocke mittig, weiÃƒÅ¸ bis leicht blÃƒÂ¤ulich. Kein Schatten, kein Leuchten und keine eingebauten Bewegungsstreifen; GrÃƒÂ¶ÃƒÅ¸e, Transparenz und Bewegung ÃƒÂ¼bernimmt das Spiel. Die Dateien werden noch nicht automatisch eingebunden, solange sie nicht vorhanden sind. Der aktuelle Effekt funktioniert ohne diese Grafiken.
-
-Bodenraster 32Ãƒâ€”32. DateigrÃƒÂ¶ÃƒÅ¸e und GrÃƒÂ¶ÃƒÅ¸e in der Spielwelt sind unabhÃƒÂ¤ngig; transparente RÃƒÂ¤nder werden im Code berÃƒÂ¼cksichtigt. Vorhandene Bilder mÃƒÂ¼ssen nicht auf ein einheitliches Exportformat gezwungen werden.
-
-| Datei in assets/props | DateigrÃƒÂ¶ÃƒÅ¸e | Darstellung in Weltpixeln |
-|---|---|---|
-| shelf_empty.png | 48Ãƒâ€”64 | 48Ãƒâ€”64 |
-| deposit_crate_green.png | 64Ãƒâ€”64 | 26Ãƒâ€”26 |
-| deposit_crate_yellow.png | 64Ãƒâ€”64 | 26Ãƒâ€”26 |
-| snow_shovel.png | 64Ãƒâ€”64 | 32Ãƒâ€”32 |
-| ball.png | 32Ãƒâ€”32 | 10Ãƒâ€”10 |
-| kit.png | 32Ãƒâ€”32 | 16Ãƒâ€”16 |
-| box.png | 64Ãƒâ€”32 | 56Ãƒâ€”28 |
-
-Kistenvarianten sind gleichartige PfandgegenstÃƒÂ¤nde. Sie stehen an der Garage und nach dem Pfandauftrag im Materialraum. Regale werden bei richtiger Ablage sichtbar mit Material gefÃƒÂ¼llt. Der Schneeschieber ist dekorativ platziert; eine RÃƒÂ¤umaufgabe ist ein weiterer Entwicklungsschritt.
-
-Keine zusÃƒÂ¤tzlichen Grafiken sind zum Testen der Sortieraufgabe nÃƒÂ¶tig. Weitere Bodenvarianten und ein kompletter GUI-Satz warten, bis die Hauptspielschleife funktioniert.
-
-## Schriften
-
-Vom Nutzer bereitgestellt: Minecraftia-Regular.woff2 fÃƒÂ¼r Texte, RasterForgeRegular.woff2 fÃƒÂ¼r Titel. Dateien liegen lokal in assets/fonts. Beide unterstÃƒÂ¼tzen deutsche Umlaute und ÃƒÅ¸. Nunito bleibt als Fallback und behÃƒÂ¤lt seine mitgelieferte OFL-Lizenz. Die neuen Schriften verwenden ihre normale StrichstÃƒÂ¤rke ohne kÃƒÂ¼nstliche Fettung. Canvas und HTML verwenden dieselben Familien.
-
-Spielcode enthÃƒÂ¤lt Sonderzeichen als JavaScript-Escapes, HTML als Zeichenreferenzen. Beim VerÃƒÂ¶ffentlichen wird eine neue Version fÃƒÂ¼r CSS und JS gesetzt.
+Die lokalen Quelldateien sind maßgeblich. In 0.14 wurden alle 61 Quelldateien gegen GitHub geprüft und 17 neue/geänderte Dateien übernommen. Schneehaufen liegen jetzt nur unter `assets/environment/` im Repository. Asset-URLs haben eine Versionskennung, damit geänderte Bilder neu geladen werden.

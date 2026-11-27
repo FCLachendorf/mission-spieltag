@@ -1,8 +1,9 @@
 'use strict';
 (() => {
 const $=id=>document.getElementById(id),canvas=$('world'),ctx=canvas.getContext('2d',{alpha:false});
+const ASSET_VERSION='14-layout';
 const KEY='fcl-mission-spieltag-v2',W=960,H=704,T=32;
-const files={grass:'tiles/grass.png',path:'tiles/path.png',snow:'tiles/snow.png',ball:'props/ball.png',box:'props/box.png',red:'props/cone_red.png',yellow:'props/cone_yellow.png',kit:'props/kit.png',deposit_green:'props/deposit_crate_green.png',deposit_yellow:'props/deposit_crate_yellow.png',shelf:'props/shelf_empty.png',shovel:'props/snow_shovel.png',snow_small:'props/snow_pile_small.png',snow_mid:'props/snow_pile_mid.png',snow_big:'props/snow_pile_big.png',trash:'props/trash_bag.png'};
+const files={grass:'tiles/grass.png',path:'tiles/path.png',snow:'tiles/snow.png',ball:'props/ball.png',box:'props/box.png',red:'props/cone_red.png',yellow:'props/cone_yellow.png',kit:'props/kit.png',deposit_green:'props/deposit_crate_green.png',deposit_yellow:'props/deposit_crate_yellow.png',shelf:'props/shelf_empty.png',shovel:'props/snow_shovel.png',snow_small:'environment/snow_pile_small.png',snow_mid:'environment/snow_pile_mid.png',snow_big:'environment/snow_pile_big.png',trash:'props/trash_bag.png'};
 for(const d of ['front','back','left','right'])for(const p of ['s','w'])files[d+'_'+p]=`characters/player_${d}_${p}.png`;
 for(const d of ['front','back','left','right'])for(const p of ['s','w'])files[d+'_shovel_'+p]=`characters/player_${d}_shovel_${p}.png`;
 files.cloth='props/cloth.png';for(let i=1;i<=5;i++)files['flake'+i]='particles/snowflake_0'+i+'.png';
@@ -21,11 +22,17 @@ const TRASH=[{zone:'base',x:340,y:530},{zone:'training',x:180,y:490},{zone:'stad
 const GATES={base:[{id:'to-training',type:'travel',x:906,y:400,to:'training',sx:250,sy:400,label:'Zum Trainingsfeld',duration:450},{id:'to-stadium',type:'travel',x:480,y:650,to:'stadium',sx:480,sy:145,label:'Zum Spieltag',duration:450}],training:[{id:'to-base',type:'travel',x:54,y:400,to:'base',sx:710,sy:400,label:'Zum Containerhof',duration:450}],stadium:[{id:'to-base',type:'travel',x:480,y:105,to:'base',sx:480,sy:600,label:'Zum Containerhof',duration:450}]};
 const SORT_ITEMS=[{k:'ball',group:'balls',name:'Fu\xdfball',x:140,y:440},{k:'kit',group:'kits',name:'Trikot',x:220,y:380},{k:'red',group:'training',name:'Rotes H\xfctchen',x:165,y:535},{k:'ball',group:'balls',name:'Fu\xdfball',x:365,y:520},{k:'kit',group:'kits',name:'Trikot',x:375,y:410},{k:'yellow',group:'training',name:'Gelbes H\xfctchen',x:300,y:480}];
 const SHELVES=[{group:'balls',name:'B\xe4lle',x:160,y:340},{group:'kits',name:'Trikots',x:265,y:340},{group:'training',name:'Training',x:370,y:340}];
-const SNOW=[{zone:'base',k:'snow_small',x:85,y:550},{zone:'base',k:'snow_mid',x:850,y:570},{zone:'base',k:'snow_big',x:455,y:170},{zone:'training',k:'snow_small',x:200,y:205},{zone:'training',k:'snow_mid',x:810,y:560},{zone:'training',k:'snow_big',x:155,y:620},{zone:'stadium',k:'snow_big',x:115,y:585},{zone:'stadium',k:'snow_mid',x:830,y:170}];
-const VEGETATION=[
- {zone:'base',k:'tree1',x:60,y:140},{zone:'base',k:'tree2',x:880,y:165},{zone:'base',k:'tree1',x:75,y:650},{zone:'base',k:'tree2',x:895,y:650},{zone:'base',k:'bush1',x:130,y:600},{zone:'base',k:'bush2',x:340,y:635},{zone:'base',k:'bush3',x:770,y:625},
- {zone:'training',k:'tree1',x:80,y:175},{zone:'training',k:'tree2',x:840,y:160},{zone:'training',k:'tree1',x:85,y:640},{zone:'training',k:'tree2',x:890,y:640},{zone:'training',k:'bush1',x:160,y:245},{zone:'training',k:'bush2',x:810,y:620},{zone:'training',k:'bush3',x:260,y:600},
- {zone:'stadium',k:'tree1',x:100,y:145},{zone:'stadium',k:'tree2',x:870,y:155},{zone:'stadium',k:'tree1',x:90,y:650},{zone:'stadium',k:'tree2',x:880,y:655},{zone:'stadium',k:'bush1',x:185,y:600},{zone:'stadium',k:'bush2',x:820,y:630},{zone:'stadium',k:'bush3',x:165,y:330}];
+// Hand-placed mixed edge groups; paths and activity areas stay open.
+const ENV_CLUSTERS=[
+ {zone:'base',x:150,y:620,plants:[['tree1',-60,30],['tree2',70,35],['bush1',-55,-20],['bush2',120,20]],snow:[['big',-10,-10],['mid',25,5],['small',55,-3]]},
+ {zone:'base',x:840,y:620,plants:[['tree1',-50,30],['tree2',60,30],['bush3',-5,15],['bush1',-85,25]],snow:[['big',40,-10],['mid',15,5],['small',70,0]]},
+ {zone:'training',x:160,y:205,plants:[['tree1',-80,-15],['tree2',50,0],['bush2',-15,35],['bush1',90,35]],snow:[['big',10,-10],['mid',40,15],['small',-50,20]]},
+ {zone:'training',x:825,y:625,plants:[['tree1',65,25],['tree2',-65,25],['bush3',-5,20],['bush1',-95,-15]],snow:[['big',45,-20],['mid',10,-10],['small',80,0]]},
+ {zone:'stadium',x:135,y:615,plants:[['tree1',-60,25],['tree2',55,35],['bush2',0,30],['bush1',60,-10]],snow:[['big',-20,-30],['mid',15,-15],['small',-35,0]]},
+ {zone:'stadium',x:840,y:190,plants:[['tree1',65,-25],['tree2',-60,-25],['bush3',10,30],['bush1',-100,20]],snow:[['big',10,-20],['mid',45,5],['small',-25,5]]}
+];
+const VEGETATION=ENV_CLUSTERS.flatMap(c=>c.plants.map(([k,dx,dy])=>({zone:c.zone,k,x:c.x+dx,y:c.y+dy})));
+const SNOW=ENV_CLUSTERS.flatMap(c=>c.snow.map(([k,dx,dy])=>({zone:c.zone,k:'snow_'+k,x:c.x+dx,y:c.y+dy})));
 function vegetationLayout(v){const m=VEGETATION_ART[v.k];return{x:v.x-m.cx*m.scale,y:v.y-m.foot*m.scale,w:m.sw*m.scale,h:m.sh*m.scale};}
 function drawVegetation(v){const b=vegetationLayout(v);ctx.drawImage(imgs[v.k],b.x,b.y,b.w,b.h);}
 function vegetationBlocked(x,y,zone){return VEGETATION.some(v=>{if(v.zone!==zone)return false;const m=VEGETATION_ART[v.k];return((x-v.x)/m.rx)**2+((y-(v.y-3))/m.ry)**2<1;});}
@@ -127,7 +134,7 @@ function repairUI(){$('repair').scrollTop=0;$('nail-board').scrollTop=0;const na
  for(let i=0;i<4;i++){const n=$('nail-'+i);n.disabled=!nails||!nailAvailable(i);n.hidden=!nails||repairRun.removed.includes(i);n.style.setProperty('--nail-lift',repairRun.selected===i?(-10*repairRun.turns/PULL_ANGLE)+'px':'0px');n.classList[repairRun.selected===i?'add':'remove']('selected');n.style.left=NAILS[i].x/59*100+'%';n.style.top=NAILS[i].y/39*100+'%';}
  for(let i=0;i<3;i++){$('snow-'+i).disabled=repairRun.snow[i]>=1;$('snow-'+i).style.setProperty('--cleared',repairRun.snow[i]*100+'%');}
  $('plank-1').classList[frontPlankOff()?'add':'remove']('fallen');$('plank-2').classList[repairRun.removed.includes(2)&&repairRun.removed.includes(3)?'add':'remove']('fallen');
- $('repair-window').src='assets/minigames/pullnail/'+(clean?'window_fixed.png':'window_dirty.png');$('wipe-canvas').hidden=!clean;$('nail-board').hidden=snow;$('snow-lanes').hidden=!snow;$('repair-control').hidden=snow;$('repair-stick').hidden=!nails;
+ $('repair-window').src='assets/minigames/pullnail/'+(clean?'window_fixed.png':'window_dirty.png')+'?v='+ASSET_VERSION;$('wipe-canvas').hidden=!clean;$('nail-board').hidden=snow;$('snow-lanes').hidden=!snow;$('repair-control').hidden=snow;$('repair-stick').hidden=!nails;
  $('repair-title').textContent=nails?'Bretter entfernen':clean?'Fenster reinigen':repairRun.room==='material'?'Linken Eingang freischaufeln':'Rechten Eingang freischaufeln';
  $('repair-help').textContent=nails?(frontPlankOff()?'Jetzt die beiden N\xe4gel des hinteren Bretts ziehen.':'Zuerst die beiden N\xe4gel des vorderen Bretts ziehen.')+' Nagel w\xe4hlen, dann mehrmals gleichm\xe4\xdfig im Kreis drehen.':clean?'Wische mit Finger oder gedr\xfcckter Maus \xfcber das Fenster. Bringe die Anzeige auf 100 %.':'Schiebe die drei Schneehaufen nach rechts. Mit Tastatur: Haufen fokussieren und dreimal Enter dr\xfccken.';
  $('repair-step').textContent=clean?'Lappen bewegen':'Weiterdrehen';$('repair-step').disabled=nails&&repairRun.selected===null;
@@ -155,5 +162,5 @@ function wipePoint(e){if(e.pointerId!==repairRun.wipePointer)return;const b=$('w
 $('wipe-canvas').addEventListener('pointerdown',e=>{if(repairRun.wipePointer!==null)return;repairRun.wipePointer=e.pointerId;repairRun.lastWipe=null;$('wipe-canvas').setPointerCapture(e.pointerId);wipePoint(e);});$('wipe-canvas').addEventListener('pointermove',wipePoint);for(const ev of ['pointerup','pointercancel','lostpointercapture'])$('wipe-canvas').addEventListener(ev,e=>{if(e.pointerId===repairRun.wipePointer)stopRepairPointer();});
 $('repair-step').onclick=()=>repairRun.kind==='clean'?wipeNext():rotateRepair(Math.PI/6);$('repair-close').onclick=()=>{$('repair').close();};$('repair').addEventListener('close',()=>{document.body?.classList.remove('repairing-window');stopRepairPointer();release();repairRun.kind=null;});window.addEventListener('blur',stopRepairPointer);document.addEventListener('visibilitychange',stopRepairPointer);
 
-Promise.all(Object.entries(files).map(([k,path])=>new Promise((resolve,reject)=>{const img=new Image(),timeout=setTimeout(()=>reject(new Error(path)),15000);img.onload=()=>{clearTimeout(timeout);imgs[k]=img;resolve();};img.onerror=()=>{clearTimeout(timeout);reject(new Error(path));};img.src='assets/'+path;}))).then(()=>{resize();reveal(true);hud();ready=true;$('loading').hidden=true;requestAnimationFrame(frame);}).catch(err=>{$('load-status').textContent='Grafik konnte nicht geladen werden: '+err.message+'. Pr\xfcfe die Verbindung und lade erneut.';$('retry').hidden=false;});
+Promise.all(Object.entries(files).map(([k,path])=>new Promise((resolve,reject)=>{const img=new Image(),timeout=setTimeout(()=>reject(new Error(path)),15000);img.onload=()=>{clearTimeout(timeout);imgs[k]=img;resolve();};img.onerror=()=>{clearTimeout(timeout);reject(new Error(path));};img.src='assets/'+path+'?v='+ASSET_VERSION;}))).then(()=>{resize();reveal(true);hud();ready=true;$('loading').hidden=true;requestAnimationFrame(frame);}).catch(err=>{$('load-status').textContent='Grafik konnte nicht geladen werden: '+err.message+'. Pr\xfcfe die Verbindung und lade erneut.';$('retry').hidden=false;});
 })();

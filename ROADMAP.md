@@ -1,21 +1,10 @@
-# Vereinbarte Richtung
+# Nächste Schritte
 
-## Spielgefühl
+1. 0.14: Alle aktuellen Assets synchronisieren, sechs gezielte Mischgruppen am Kartenrand; freie Wege, Eingänge und Aufgaben prüfen.
+2. Trainingsfeld längs ausrichten; kurze Aufgabenfolge: Geräte holen, Hütchen/Stangen platzieren, Aufstellfiguren aufstellen. Vorhandene Texturen zuerst nutzen.
+3. Kreidewagen sinnvoll einsetzen: eine kurze gesteuerte Linienaufgabe statt bloßem Kaufen; deutliches Vorher/Nachher auf dem Feld.
+4. Verkaufsstand herrichten und kurze Bestellrunde. Texturen siehe ASSETS.md, Paket 2.
+5. Tribüne und Flutlicht als sichtbare Fortschritte, anschließend Fußballfinale und Advent-Hinweis.
+6. Einführung, Gastspiel/Anmeldung und individuelle Figur erst nach einer vollständigen spielbaren Runde. GitHub Pages speichert bisher lokal; kontobasierte Spielstände brauchen einen Serverdienst.
 
-Kurze erste Aufgaben führen durch das Gelände. Spätere Aufgaben verwenden dieselben klar benannten Orte. Kleine verbundene Karten statt einer großen Laufstrecke. Erkundungsabhängige Minimap. Keine Pflicht zu langem Wiederholen einfacher Sammelaktionen.
-
-## Zielzustand
-
-- Gemütlicher Container mit Material-/Pfandlager links und Mannschaftstreff rechts.
-- Fertiger Verkaufsstand.
-- Gepflegtes, im Winter bespielbares Hauptfeld.
-- Sichtbare Tribüne und Flutlicht.
-- Persönliche Vereinsdetails: vorhandener Wandfund, echte Mannschaftsbilder, durchblätterbare Sammelkarten.
-
-## Nächste Spielmechanik
-
-Aktives Schneeräumen mit aufgenommenem Schneeschieber: Bereich befahren/abschieben, sichtbare freie Wege und zusammengeschobene Haufen. Eine überschaubare Fläche, keine minutenlange Pflichtarbeit. Anschließend Verkaufsstand als aktive Aufgabe und die Stadionausbauten. Das Elfmeterschießen bleibt der geplante Abschluss; bevor zusätzliche Bereiche entstehen, muss ein vollständiger kurzer Durchlauf funktionieren.
-
-## Nicht Teil von 0.6
-
-Schneeräumspiel, bedienbarer Verkaufsstand, Tribünen-/Flutlichtausbau, Finale und Abschlusskarte. Die zugehörigen Flächen sind vorbereitet. Die bestehende Rasenheizung und Sortieraufgabe funktionieren weiter. Echte Mannschaftsfotos brauchen noch passende Dateien. Das digitale Heft verwendet vorerst den vorhandenen 25-Karten-Satz aus dem anderen FCL-Repository.
+Mehr Effekte haben derzeit weniger Nutzen als verständliche Ziele und unterschiedliche Tätigkeiten. Insider, Bilder und eigenes Sammelheft ergänzen den fertigen Ablauf.

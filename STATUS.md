@@ -1,3 +1,7 @@
+## Test 0.14
+
+Sechs feste Mischgruppen aus Bäumen, Büschen und Schnee statt verstreuter Einzelobjekte. Alle 61 lokalen Asset-Dateien abgeglichen, 17 neue/geänderte Dateien übernommen; Schneehaufen nach environment verschoben. Versionierte Bild-URLs verhindern veraltete Cache-Bilder. Priorisierte Zeichenliste in ASSETS.md und nächste Spielaufgaben in ROADMAP.md. Bestehende Aufgaben, Kollisions- und Erreichbarkeitstests bestehen.
+
 ## Test 0.13
 
 - Beide Winterbäume und alle drei Buschvarianten in allen drei Außenbereichen eingebaut. Größen und Seitenverhältnisse bleiben erhalten; getrennte Bodenanker berücksichtigen 64×64, 96×96 und 96×64 bei den Büschen.

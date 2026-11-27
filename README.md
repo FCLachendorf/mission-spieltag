@@ -1,3 +1,7 @@
+## Test 0.14
+
+Sechs feste Mischgruppen aus Bäumen, Büschen und Schnee statt verstreuter Einzelobjekte. Alle 61 lokalen Asset-Dateien abgeglichen, 17 neue/geänderte Dateien übernommen; Schneehaufen nach environment verschoben. Versionierte Bild-URLs verhindern veraltete Cache-Bilder. Priorisierte Zeichenliste in ASSETS.md und nächste Spielaufgaben in ROADMAP.md. Bestehende Aufgaben, Kollisions- und Erreichbarkeitstests bestehen.
+
 ## Test 0.13
 
 Wintervegetation mit zwei Bäumen und drei Buschvarianten, passenden Bodenankern, Kollisionen und Verdeckung. Schneeflocken fallen mit individuellen Zufallspositionen und Bewegungen statt regelmäßiger Reihen.
